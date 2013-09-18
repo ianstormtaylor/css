@@ -1,0 +1,16 @@
+{
+  "name": "css",
+  "repo": "ianstormtaylor/css",
+  "license": "MIT",
+  "version": "0.0.5",
+  "description": "Simple CSS manipulation.",
+  "keywords": ["css", "style"],
+  "dependencies": {
+    "component/type": "*"
+  },
+  "development": {
+    "component/assert": "*",
+    "jkroso/computed-style": "*"
+  },
+  "scripts": ["index.js"]
+}
