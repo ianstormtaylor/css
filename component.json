@@ -6,11 +6,11 @@
   "description": "Simple CSS manipulation.",
   "keywords": ["css", "style"],
   "dependencies": {
-    "component/type": "*"
+    "component/type": "*",
+    "jkroso/computed-style": "*"
   },
   "development": {
-    "component/assert": "*",
-    "jkroso/computed-style": "*"
+    "component/assert": "*"
   },
   "scripts": ["index.js"]
 }
