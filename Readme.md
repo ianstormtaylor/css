@@ -13,15 +13,15 @@ var css = require('css');
 var div = document.getElementById('header');
 
 // get
-css(div, 'color'); // black
+css(div, 'position'); // "relative"
 
 // set one at a time
-css(div, 'color', 'red');
+css(div, 'position', 'fixed');
 
 // set many at a time
 css(div, {
-  color: 'red',
-  fontSize: '24px'
+  position: 'fixed',
+  top: '24px'
 });
 ```
 
