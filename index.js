@@ -1,5 +1,6 @@
 
-var computed = require('computed-style')
+var camel = require('to-camel-case')
+  , computed = require('computed-style')
   , type = require('type');
 
 
@@ -51,5 +52,5 @@ function get (el, prop) {
  */
 
 function set (el, prop, value) {
-  el.style[prop] = value;
+  el.style[camel(prop)] = value;
 }
