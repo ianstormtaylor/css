@@ -12,12 +12,12 @@ describe('css', function () {
     this.div.parentNode.removeChild(this.div);
   });
 
-  it('css(el, prop)', function () {
+  it('should get a property\'s value', function () {
     this.div.style.fontSize = '12px';
     assert('12px' == css(this.div, 'fontSize'));
   });
 
-  it('css(el, prop, value)', function () {
+  it('should set a property\'s value', function () {
     css(this.div, 'fontSize', '16px');
     assert('16px' == css(this.div, 'fontSize'));
   });
@@ -25,9 +25,9 @@ describe('css', function () {
   it('should work with dashed case', function(){
     css(this.div, 'font-size', '16px');
     assert('16px' == css(this.div, 'font-size'));
-  })
+  });
 
-  it('css(el, obj)', function () {
+  it('should set multiple properties at once', function () {
     css(this.div, {
       position: 'fixed',
       lineHeight: '10px'
