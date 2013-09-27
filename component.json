@@ -2,9 +2,9 @@
   "name": "css",
   "repo": "ianstormtaylor/css",
   "license": "MIT",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Simple CSS manipulation.",
-  "keywords": ["css", "style"],
+  "keywords": ["css", "style", "computed"],
   "dependencies": {
     "component/type": "*",
     "ianstormtaylor/to-camel-case": "*",

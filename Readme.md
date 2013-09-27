@@ -23,6 +23,9 @@ css(div, {
   position: 'fixed',
   top: '24px'
 });
+
+// use dashes if you want
+css(div, 'font-size', '16px');
 ```
 
 ## API
