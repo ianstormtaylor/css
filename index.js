@@ -10,6 +10,21 @@ var camel = require('to-camel-case')
 
 module.exports = css;
 
+/**
+ * Don't append `px`.
+ */
+
+var ignore = {
+  columnCount: true,
+  fillOpacity: true,
+  fontWeight: true,
+  lineHeight: true,
+  opacity: true,
+  orphans: true,
+  widows: true,
+  zIndex: true,
+  zoom: true
+};
 
 /**
  * Get or set CSS properties of an `el`.
@@ -52,5 +67,7 @@ function get (el, prop) {
  */
 
 function set (el, prop, value) {
-  el.style[camel(prop)] = value;
+  prop = camel(prop);
+  if ('number' == typeof value && !ignore[prop]) value += 'px';
+  el.style[prop] = value;
 }
