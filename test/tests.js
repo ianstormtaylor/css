@@ -1,7 +1,7 @@
 describe('css', function () {
 
-  var assert = require('assert')
-    , css = require('css');
+  var assert = require('assert');
+  var css = require('css');
 
   beforeEach(function () {
     this.div = document.createElement('div');
@@ -22,11 +22,6 @@ describe('css', function () {
     assert('16px' == css(this.div, 'fontSize'));
   });
 
-  it('should work with dashed case', function(){
-    css(this.div, 'font-size', '16px');
-    assert('16px' == css(this.div, 'font-size'));
-  });
-
   it('should set multiple properties at once', function () {
     css(this.div, {
       position: 'fixed',
@@ -34,6 +29,23 @@ describe('css', function () {
     });
     assert('fixed' == css(this.div, 'position'));
     assert('10px' == css(this.div, 'lineHeight'));
+  });
+
+  it('should work with dashed case', function(){
+    css(this.div, 'font-size', '16px');
+    assert('16px' == css(this.div, 'font-size'));
+  });
+
+  it('should append `px` when needed', function(){
+    var obj = { style: {} };
+    css(obj, 'font-size', 16);
+    assert('16px' == obj.style.fontSize);
+  });
+
+  it('should not append `px` when not needed', function(){
+    var obj = { style: {} };
+    css(obj, 'opacity', 1);
+    assert(1 == obj.style.opacity);
   });
 
 });
