@@ -26,6 +26,8 @@ css(div, {
 
 // use dashes if you want
 css(div, 'font-size', '16px');
+
+// it will add "px" for you
 ```
 
 ## API
