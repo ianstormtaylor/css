@@ -48,4 +48,27 @@ describe('css', function () {
     assert(1 == obj.style.opacity);
   });
 
+  describe('wrapped', function(){
+    var div;
+
+    beforeEach(function(){
+      div = css(this.div);
+    })
+
+    it('should get a property\'s value', function(){
+      this.div.style.fontSize = '12px';
+      assert('12px' == div('fontSize'));
+    })
+
+    it('should set multiple properties at once', function(){
+      div({ height: 100, width: 100 });
+      assert('100px' == this.div.style.width);
+      assert('100px' == this.div.style.height);
+    })
+
+    it('should set a single property', function(){
+      div('height', 100);
+      assert('100px' == this.div.style.height);
+    })
+  })
 });
