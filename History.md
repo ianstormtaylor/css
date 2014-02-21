@@ -1,3 +1,7 @@
+0.3.0 - February 30, 2013
+-------------------------
+* add wrapped method functionality, by [@yields](https://github.com/yields)
+
 0.2.0 - September 29, 2013
 --------------------------
 * add `px` automatically, by [@yields](https://github.com/yields)
