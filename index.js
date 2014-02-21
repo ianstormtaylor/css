@@ -35,6 +35,8 @@ var ignore = {
  */
 
 function css (el, prop, value) {
+  if (1 == arguments.length) return wrapped(el);
+
   if (type(prop) == 'object') {
     for (var key in prop) set(el, key, prop[key]);
     return;
@@ -43,6 +45,19 @@ function css (el, prop, value) {
   return arguments.length == 3
     ? set(el, prop, value)
     : get(el, prop);
+}
+
+/**
+ * Wrap the given `el`.
+ *
+ * @param {Element} el
+ */
+
+function wrapped (el) {
+  return function(){
+    var args = [].slice.call(arguments);
+    return css.apply(null, [el].concat(args));
+  };
 }
 
 
