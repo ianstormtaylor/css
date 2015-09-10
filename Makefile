@@ -6,7 +6,7 @@ build-component: components index.js
 
 build-browserify: node_modules index.js
 	mkdir -p build
-	@browserify --require ./index.js:css --outfile build/build.js
+	@browserify --require assert --require ./index.js:css --outfile build/build.js
 
 
 components: component.json

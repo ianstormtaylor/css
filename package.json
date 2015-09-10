@@ -20,6 +20,9 @@
     "computed-style-component": "^0.1.0",
     "to-camel-case": "^0.2.1"
   },
+  "devDependencies": {
+    "assert": "jkroso/assert"
+  },
   "browser": {
     "type": "component-type",
     "computed-style": "computed-style-component"
