@@ -1,3 +1,7 @@
+0.3.1 - September 17, 2015
+-------------------------
+* add support for browserify/npm build
+
 0.3.0 - February 30, 2013
 -------------------------
 * add wrapped method functionality, by [@yields](https://github.com/yields)
