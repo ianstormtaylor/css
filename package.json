@@ -1,0 +1,35 @@
+{
+  "name": "ianstormtaylor-css",
+  "version": "0.3.0",
+  "description": "Simple CSS manipulation.",
+  "scripts": {
+    "test": "make check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianstormtaylor/css.git"
+  },
+  "keywords": [
+    "browser",
+    "css",
+    "style",
+    "computed"
+  ],
+  "dependencies": {
+    "component-type": "^1.1.0",
+    "computed-style-component": "^0.1.0",
+    "to-camel-case": "^0.2.1"
+  },
+  "devDependencies": {
+    "assert": "jkroso/assert"
+  },
+  "browser": {
+    "type": "component-type",
+    "computed-style": "computed-style-component"
+  },
+  "author": "Ian Storm Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianstormtaylor/css/issues"
+  }
+}
